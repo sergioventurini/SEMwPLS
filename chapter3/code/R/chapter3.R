@@ -1,5 +1,5 @@
-path_data <- ""    # place here the path to store data
-path_figures <- "" # place here the path to store figures
+path_figures <- "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
+path_data <- "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
 RNGversion("3.5.0")
 if (getOption("scipen") <= 0) options(scipen = 5)
 
@@ -47,7 +47,7 @@ set.seed(1406)   # for reproducibility
 tour_boot <- matrixpls.boot(tour_data_nomiss, model = tour_mod, R = 1000)
 summary(tour_boot)
 
-educ_data <- read.csv("https://www.gastonsanchez.com/education.csv")
+educ_data <- read.csv(file.path(path_data, "education.csv"))
 educ_data <- educ_data[2:24]
 educ_data$sup.appre <- 8 - educ_data$sup.under
 educ_data$loy.pleas <- 8 - educ_data$loy.asha

@@ -1,7 +1,6 @@
 clear all
 
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
 
 use "`path_data'/ch3_MotivesActivity.dta", clear
 
@@ -218,8 +217,7 @@ graph close
 *** Figure 3.16 ***
 clear all
 
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
 
 use "`path_data'/ch3_MotivesActivity.dta", clear
 
@@ -245,10 +243,10 @@ estat total
 *** Table 3.6 ***
 clear all
 
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
+local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
 
-import delimited using "https://www.gastonsanchez.com/education.csv", clear
+use "`path_data'/education.dta", clear
 
 generate supappre = 8 - supunder
 generate loypleas = 8 - loyasha
@@ -287,8 +285,7 @@ mata: (vec(st_matrix("b_PLS")), vec(st_matrix("b_PLSc")))
 *** Figures 3.21-3.22 ***
 clear all
 
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
 
 use "`path_data'/ch3_Curiosity.dta", clear
 
