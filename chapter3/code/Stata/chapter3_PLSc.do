@@ -16,7 +16,7 @@ rename spm15_3 recommend
 rename spm15_7 satisf
 rename spm15_8 expecta
 
-*** Figure 3.7 ***
+*** Figure 3.6 ***
 tabstat energy getaway boredom exciting entertain visittown ///
 	nature fishing recommend satisf expecta, ///
 	statistics(n mean median sd p25 p75) columns(statistics)
@@ -88,26 +88,26 @@ quietly plssemc (ACTIVITY < entertain visittown nature fishing) ///
 							  (SATISFACTION > recommend satisf expecta), ///
 							  structural(SATISFACTION ACTIVITY MOTIVES)
 
-*** Figure 3.11 ***
+*** Figure 3.10 ***
 local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
 
 plssemplot, loadings
+local filename "`path_images'/fig3_10.pdf"
+graph export "`filename'", replace
+graph close
+
+*** Figure 3.11 ***
+plssemplot, outerweights
 local filename "`path_images'/fig3_11.pdf"
 graph export "`filename'", replace
 graph close
 
 *** Figure 3.12 ***
-plssemplot, outerweights
-local filename "`path_images'/fig3_12.pdf"
-graph export "`filename'", replace
-graph close
-
-*** Figure 3.13 ***
 label variable ACTIVITY "Scores of ACTIVITY latent variable"
 label variable MOTIVES  "Scores of MOTIVES latent variable"
 label variable SATISFACTION "Scores of SATISFACTION latent variable"
 plssemplot, scores
-local filename "`path_images'/fig3_13.pdf"
+local filename "`path_images'/fig3_12.pdf"
 graph export "`filename'", replace
 graph close
 
@@ -198,23 +198,23 @@ estimates restore knn_imputation_10
 matlist e(loadings)
 matlist e(struct_b)
 
-*** Figure 3.14a, b, c ***
+*** Figure 3.13a, b, c ***
 local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
 
 graph matrix ACTIVITY*, half scheme(sj)
-local filename "`path_images'/fig3_14a.pdf"
+local filename "`path_images'/fig3_13a.pdf"
 graph export "`filename'", replace
 graph close
 graph matrix MOTIVES*, half scheme(sj)
-local filename "`path_images'/fig3_14b.pdf"
+local filename "`path_images'/fig3_13b.pdf"
 graph export "`filename'", replace
 graph close
 graph matrix SATISFACTION*, half scheme(sj)
-local filename "`path_images'/fig3_14c.pdf"
+local filename "`path_images'/fig3_13c.pdf"
 graph export "`filename'", replace
 graph close
 
-*** Figure 3.16 ***
+*** Figure 3.15 ***
 clear all
 
 local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
@@ -282,7 +282,7 @@ mat list b_PLS
 mata: (vec(st_matrix("b_PLS")), vec(st_matrix("b_PLSc")))
 */
 
-*** Figures 3.21-3.22 ***
+*** Figures 3.20-3.21 ***
 clear all
 
 local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
