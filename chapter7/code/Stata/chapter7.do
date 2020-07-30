@@ -1,6 +1,5 @@
 *** Figure 7.1 ***
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter7/figures"
 
 clear all
 set obs 1000
@@ -36,9 +35,9 @@ bysort group: summarize x
 ttest x, by(group) unequal
 
 
-*** Figures 7.6 and 7.8 - REBUS-PLS example (from Mehmetoglu, 2011) ***
-local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
+*** Figures 7.4-7.8 - REBUS-PLS example (from Mehmetoglu, 2011) ***
+local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter7/figures"
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter7/data"
 
 quietly use "`path_data'/ch7_Cruise.dta", clear
 
@@ -80,7 +79,7 @@ bysort rebus_class: plssem (TANGIBLE > Service Food Hygiene) (ATMOSPHERIC > Live
   implementation is still experimental [01/09/2020]!
 */
 
-local path_data ""   // place here the path to store data
+local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter7/data"
 
 quietly use "`path_data'/ch7_Cruise.dta", clear
 
