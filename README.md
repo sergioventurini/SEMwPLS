@@ -23,4 +23,4 @@ devtools::install_github("gastonstat/plspm")
 
 You can find more information about the `plssem` Stata package at [https://github.com/sergioventurini/plssem](https://github.com/sergioventurini/plssem).
 
-For the `cSEM` and `plspm` packages you can refer instead to https://github.com/M-E-Radamaker/cSEM](https://github.com/M-E-Radamaker/cSEM) and https://github.com/gastonstat/plspm](https://github.com/gastonstat/plspm) respectively.
+For the `cSEM` and `plspm` packages you can refer instead to [https://github.com/M-E-Radamaker/cSEM](https://github.com/M-E-Radamaker/cSEM) and [https://github.com/gastonstat/plspm](https://github.com/gastonstat/plspm) respectively.
