@@ -8,7 +8,7 @@ To get the PLS-SEM packages used in the book installed in your computer, you nee
 
 - for Stata, execute the following lines directly in Stata
 
-``` r
+``` stata
 net install github, from("https://haghish.github.io/github/")
 github install sergioventurini/plssem
 ```
@@ -23,4 +23,4 @@ devtools::install_github("gastonstat/plspm")
 
 You can find more information about the `plssem` Stata package at [https://github.com/sergioventurini/plssem](https://github.com/sergioventurini/plssem).
 
-For the `cSEM` and `plspm` packages you can refer instead to [https://github.com/M-E-Rademaker/cSEM](https://github.com/M-E-Rademaker/cSEM) and [https://github.com/gastonstat/plspm](https://github.com/gastonstat/plspm) respectively.
+For the `cSEM` and `plspm` `R` packages, you can refer instead to [https://github.com/M-E-Rademaker/cSEM](https://github.com/M-E-Rademaker/cSEM) and [https://github.com/gastonstat/plspm](https://github.com/gastonstat/plspm) respectively.
