@@ -1,6 +1,6 @@
 clear all
 
-local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
+local path_data ""   // place here the path to store data
 
 use "`path_data'/ch3_MotivesActivity.dta", clear
 
@@ -89,7 +89,7 @@ quietly plssemc (ACTIVITY < entertain visittown nature fishing) ///
 							  structural(SATISFACTION ACTIVITY MOTIVES)
 
 *** Figure 3.10 ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
+local path_images ""   // place here the path to save images
 
 plssemplot, loadings
 local filename "`path_images'/fig3_10.pdf"
@@ -199,7 +199,7 @@ matlist e(loadings)
 matlist e(struct_b)
 
 *** Figure 3.13a, b, c ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
+local path_images ""   // place here the path to save images
 
 graph matrix ACTIVITY*, half scheme(sj)
 local filename "`path_images'/fig3_13a.pdf"
@@ -217,7 +217,7 @@ graph close
 *** Figure 3.15 ***
 clear all
 
-local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
+local path_data ""   // place here the path to store data
 
 use "`path_data'/ch3_MotivesActivity.dta", clear
 
@@ -243,8 +243,8 @@ estat total
 *** Table 3.6 ***
 clear all
 
-local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
+local path_data ""   // place here the path to store data
+local path_images ""   // place here the path to save images
 
 use "`path_data'/education.dta", clear
 
@@ -285,7 +285,7 @@ mata: (vec(st_matrix("b_PLS")), vec(st_matrix("b_PLSc")))
 *** Figures 3.20-3.21 ***
 clear all
 
-local path_data "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
+local path_data ""   // place here the path to store data
 
 use "`path_data'/ch3_Curiosity.dta", clear
 

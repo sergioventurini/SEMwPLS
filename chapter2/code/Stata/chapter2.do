@@ -60,7 +60,7 @@ predict pc*, scores
 
 
 *** Figure 2.9a ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 set obs 300
@@ -107,7 +107,7 @@ graph export "`filename'", replace
 graph close
 
 *** Figure 2.9b ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 set obs 200
@@ -130,7 +130,7 @@ graph export "`filename'", replace
 graph close
 
 *** Figure 2.9c ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 set obs 200
@@ -167,7 +167,7 @@ graph export "`filename'", replace
 graph close
 
 *** Figure 2.9d ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 set obs 500
@@ -210,7 +210,7 @@ graph close
 
 
 *** Figure 2.12 ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 matrix input D = (9 1 7 6 5 9 10 11 2 8)
@@ -424,7 +424,7 @@ graph close
 
 
 *** Figure 2.20 ***
-local path_images "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter2/figures"
+local path_images "" // place here the path to store figures
 
 clear all
 set obs 1000

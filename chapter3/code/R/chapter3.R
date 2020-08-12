@@ -1,5 +1,5 @@
-path_figures <- "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/figures"
-path_data <- "/Users/Sergio/Dropbox (Personal)/PLS-SEM_book/book/chapters/chapter3/data"
+path_data <- ""    # place here the path to store data
+path_figures <- "" # place here the path to store figures
 RNGversion("3.5.0")
 if (getOption("scipen") <= 0) options(scipen = 5)
 

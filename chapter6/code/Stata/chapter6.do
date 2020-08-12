@@ -41,7 +41,7 @@ plssem (CULTURE > CULTURE3) ///
 plssem (CULTURE > V1A V1B V1C) /// 
 			 (H_INTEREST > V3A V3B), /// 
 			 structural(H_INTEREST CULTURE) /// 
-			 group(CURIOSITY_D, reps(1000) /// 
+			 group(CURIOSITY_D, unequal reps(1000) /// 
 			 groupseed(123456) method(bootstrap))
 
 *** Measurement Model Invariance ***

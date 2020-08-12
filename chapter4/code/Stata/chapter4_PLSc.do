@@ -1,7 +1,6 @@
 clear all
 
 local path_data ""   // place here the path to store data
-local path_images "" // place here the path to store figures
 
 use "`path_data'/ch3_MotivesActivity.dta", clear
 
@@ -61,7 +60,7 @@ plssemc (Escape > energy getaway) ///
                    SATISFACTION ACTIVITY MOTIVES, ///
                    RECOMMENDATION SATISFACTION ACTIVITY) ///
                    boot(1000) seed(123456) ///
-                   missing(mean)
+                   missing(mean) loadpval
 
 factor energy getaway, pcf
 factor boredom exciting, pcf
