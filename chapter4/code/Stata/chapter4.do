@@ -66,13 +66,8 @@ factor energy getaway, pcf
 factor boredom exciting, pcf
 factor satisf expecta, pcf 
 
-egen ent_st = std(entertain)
-egen vt_st = std(visittown)
-egen nat_st = std(nature)
-egen fish_st = std(fishing)
-
-regress ACTIVITY ent_st vt_st nat_st fish_st
-vif
+regress ACTIVITY entertain visittown nature fishing
+estat vif
 
 quietly {
 	plssem (Escape > energy getaway) ///
