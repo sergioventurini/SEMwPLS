@@ -62,7 +62,7 @@ library(cSEM)
 curios_res_pi <- csem(.data = curios_data_pi,
   .model = curios_mod_pi, .PLS_weight_scheme_inner = "path",
   .disattenuate = FALSE, .tolerance = 1e-07,
-  .resample_method = "bootstrap", .R = 1000)
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 # summarize(curios_res_pi)
 
 ## Application of the two-stage approach ##
@@ -79,7 +79,8 @@ curios_mod_2s_step1 <- "
 
 curios_res_2s_step1 <- csem(.data = curios_data,
   .model = curios_mod_2s_step1, .PLS_weight_scheme_inner = "path",
-  .disattenuate = FALSE, .tolerance = 1e-07)
+  .disattenuate = FALSE, .tolerance = 1e-07,
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 # summarize(curios_res_2s_step1)
 
 ## second stage
@@ -102,7 +103,8 @@ curios_mod_2s_step2 <- "
 
 curios_res_2s_step2 <- csem(.data = curios_data_2s,
   .model = curios_mod_2s_step2, .PLS_weight_scheme_inner = "path",
-  .disattenuate = FALSE, .tolerance = 1e-07)
+  .disattenuate = FALSE, .tolerance = 1e-07,
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 # summarize(curios_res_2s_step2)
 
 ## direct use of csem() with an interaction
@@ -121,7 +123,8 @@ curios_mod_int <- "
 "
 curios_res_int <- csem(.data = curios_data,
   .model = curios_mod_int, .PLS_weight_scheme_inner = "path",
-  .disattenuate = FALSE, .tolerance = 1e-07)
+  .disattenuate = FALSE, .tolerance = 1e-07,
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 summarize(curios_res_int)
 
 neffects <- doNonlinearEffectsAnalysis(curios_res_int,
@@ -129,11 +132,11 @@ neffects <- doNonlinearEffectsAnalysis(curios_res_int,
   .moderator = "CURIOSITY",
   .independent = "CULTURE")
 # neffects
-pdf(file = file.path(path_figures, "fig7_csem_nonlinear.pdf"), width = 7,
+pdf(file = file.path(path_figures, "fig6_csem_nonlinear.pdf"), width = 7,
   height = 5)
 plot(neffects, .plot_type = "simpleeffects")
 dev.off()
-pdf(file = file.path(path_figures, "fig7_csem_floodlight.pdf"), width = 7,
+pdf(file = file.path(path_figures, "fig6_csem_floodlight.pdf"), width = 7,
   height = 5)
 plot(neffects, .plot_type = "floodlight")
 dev.off()
@@ -154,7 +157,8 @@ curios_mod_cat_step1 <- "
 
 curios_res_cat_step1 <- csem(.data = curios_data_cat,
   .model = curios_mod_cat_step1, .PLS_weight_scheme_inner = "path",
-  .disattenuate = FALSE, .tolerance = 1e-07)
+  .disattenuate = FALSE, .tolerance = 1e-07,
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 # summarize(curios_res_cat_step1)
 
 curios_data_cat_2s <-
@@ -196,7 +200,8 @@ curios_mod_mga <- "
 curios_res_mga <- csem(.data = curios_data,
   .id = "CURIOSITY_D", .model = curios_mod_mga,
   .PLS_weight_scheme_inner = "path",
-  .disattenuate = FALSE, .tolerance = 1e-07)
+  .disattenuate = FALSE, .tolerance = 1e-07,
+  .resample_method = "bootstrap", .R = 1000, .seed = 101)
 summarize(curios_res_mga)
 
 curios_mga <- testMGD(curios_res_mga, .R_bootstrap = 1000,
