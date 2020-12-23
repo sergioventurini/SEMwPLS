@@ -2,7 +2,7 @@ clear all
 
 local path_data ""   // place here the path to store data
 
-*** Figure 6.8 ***
+*** Figure 6.7 ***
 use "`path_data'/ch6_CultureCuriosity.dta", clear
 
 foreach var of varlist V1A V1B V1C V2A V2E V2F {
@@ -15,7 +15,7 @@ plssem (CULTURE > V1A_std V1B_std V1C_std) ///
        structural(H_INTEREST CULTURE*CURIOSITY) ///
        boot(1000) seed(123456)
 
-*** Figure 6.9 ***
+*** Figure 6.8 ***
 plssem (CULTURE2 > V1A V1B V1C) /// 
        (CURIOSITY2 > V2A V2E V2F) ///
 			 (H_INTEREST2 > V3A V3B), /// 
@@ -26,7 +26,7 @@ plssem (CULTURE > CULTURE2) ///
        (H_INTEREST > H_INTEREST2), /// 
        structural(H_INTEREST CULTURE*CURIOSITY)
 
-*** Figure 6.12 ***
+*** Figure 6.11 ***
 plssem (CULTURE3 > V1A V1B V1C) /// 
        (CURIOSITY3 > CURIOSITY_D) ///
        (H_INTEREST3 > V3A V3B), /// 
@@ -37,7 +37,7 @@ plssem (CULTURE > CULTURE3) ///
        (H_INTEREST > H_INTEREST3), /// 
        structural(H_INTEREST CULTURE*CURIOSITY)
 
-*** Figure 6.14 ***
+*** Figure 6.13 ***
 plssem (CULTURE > V1A V1B V1C) /// 
 			 (H_INTEREST > V3A V3B), /// 
 			 structural(H_INTEREST CULTURE) /// 
