@@ -17,7 +17,7 @@ github install sergioventurini/plssem
 
 ``` r
 install.packages("devtools")
-devtools::install_github("M-E-Radamaker/cSEM")
+devtools::install_github("M-E-Rademaker/cSEM")
 devtools::install_github("gastonstat/plspm")
 ```
 
