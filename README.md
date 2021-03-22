@@ -1,6 +1,10 @@
 # SEMwPLS
 Data sets and code to accompany the book "Structural Equation Modelling with Partial Least Squares", CRC Press (2021) by Mehmet Mehmetoglu and Sergio Venturini.
 
+![Structural Equation Modelling with Partial Least Squares Using Stata and R](https://images-na.ssl-images-amazon.com/images/I/41TEKNZ1f4L._SX320_BO1,204,203,200_.jpg)
+
+ISBN 978-1-482-22781-9
+
 ## Software installation notes
 The software used in the book are Stata and `R`.
 
